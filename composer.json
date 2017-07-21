@@ -12,7 +12,7 @@
 	},
 	"require": {
 		"php": ">=5.4.8",
-		"thanhtaivtt/codeigniter-blade": "dev-master",
+		"thanhtaivtt/ci-core": "dev-master",
 		"thanhtaivtt/taiscript": "dev-master",
 		"xiaoler/blade": "0.*",
 		"illuminate/database": "^5.3"
