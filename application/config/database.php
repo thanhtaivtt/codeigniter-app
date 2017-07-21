@@ -101,8 +101,6 @@ $db['default'] = array(
 
 // do not change
 $elo = new Elo();
-$elo->addConnection([
-$capsule = new Capsule;
 $capsule->addConnection([
     'driver'    => 'mysql',
     'host'      => $db['default']['hostname'],
