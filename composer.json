@@ -1,0 +1,27 @@
+{
+	"description": "The CodeIgniter framework customs version",
+	"name": "thanhtaivtt/codeigniter-app",
+	"type": "project",
+	"homepage": "https://codeigniter.com",
+	"license": "MIT",
+	"support": {
+		"forum": "http://forum.codeigniter.com/",
+		"wiki": "https://github.com/bcit-ci/CodeIgniter/wiki",
+		"irc": "irc://irc.freenode.net/codeigniter",
+		"source": "https://github.com/bcit-ci/CodeIgniter"
+	},
+	"require": {
+		"php": ">=5.4.8",
+		"thanhtaivtt/codeigniter-blade": "dev-master",
+		"thanhtaivtt/taiscript": "dev-master",
+		"xiaoler/blade": "0.*",
+		"illuminate/database": "^5.3"
+	},
+	"suggest": {
+		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
+	},
+	"require-dev": {
+		"mikey179/vfsStream": "1.1.*",
+		"phpunit/phpunit": "4.* || 5.*"
+	}
+}
