@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 /**
  * using eloquent of Laravel database
  */
-
+use Illuminate\Database\Capsule\Manager as Elo;
 /*
 | -------------------------------------------------------------------
 | DATABASE CONNECTIVITY SETTINGS
@@ -98,3 +98,18 @@ $db['default'] = array(
     'failover'     => array(),
     'save_queries' => true,
 );
+
+// do not change
+$elo = new Elo;
+$elo->addConnection([
+    'driver'    => 'mysql',
+    'host'      => $db['default']['hostname'],
+    'database'  => $db['default']['database'],
+    'username'  => $db['default']['username'],
+    'password'  => $db['default']['password'],
+    'charset'   => $db['default']['char_set'],
+    'collation' => $db['default']['dbcollat'],
+    'prefix'    => $db['default']['dbprefix'],
+]);
+$elo->setAsGlobal();
+$elo->bootEloquent();
