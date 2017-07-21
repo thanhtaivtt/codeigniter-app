@@ -100,13 +100,10 @@ $db['default'] = array(
 );
 
 // do not change
-<<<<<<< HEAD
-$elo = new Elo;
+$elo = new Elo();
 $elo->addConnection([
-=======
 $capsule = new Capsule;
 $capsule->addConnection([
->>>>>>> 9184cb8319042086e8a946a978a699fd9521ed51
     'driver'    => 'mysql',
     'host'      => $db['default']['hostname'],
     'database'  => $db['default']['database'],
@@ -116,10 +113,6 @@ $capsule->addConnection([
     'collation' => $db['default']['dbcollat'],
     'prefix'    => $db['default']['dbprefix'],
 ]);
-<<<<<<< HEAD
+
 $elo->setAsGlobal();
 $elo->bootEloquent();
-=======
-$capsule->setAsGlobal();
-$capsule->bootEloquent();
->>>>>>> 9184cb8319042086e8a946a978a699fd9521ed51
