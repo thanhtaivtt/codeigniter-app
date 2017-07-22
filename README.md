@@ -1,4 +1,4 @@
-# CodeIgniter + Blade Template + Eloquent ORM
+# CodeIgniter Plus
 
 ## Requires
 
