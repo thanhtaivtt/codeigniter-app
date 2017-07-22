@@ -1,54 +1,9 @@
 #!/usr/bin/php -q
 <?php 
-require ('vendor/autoload.php');
-if(isset($_SERVER["argv"][1])){
-	$code=explode(':',$_SERVER["argv"][1]);
-	if(count($code)==2){
-		switch ($code[0]) {
-			case 'make':
-			switch ($code[1]) {
-				case 'controller':
-				if(isset($_SERVER['argv'][2]))
-					new thanhtaivtt\Taiscript\Taiscript\Controller($_SERVER['argv'][2]);
-				else
-					exit('missing: "name"');
-				break;
-				case 'model':
-				if(isset($_SERVER['argv'][2]))
-					new thanhtaivtt\Taiscript\Taiscript\Model($_SERVER['argv'][2]);
-				else
-					exit('missing: "name"');
-				break;
-				case 'eloquent':
-				if(isset($_SERVER['argv'][2]))
-					new thanhtaivtt\Taiscript\Taiscript\Eloquent($_SERVER['argv'][2]);
-				else
-					exit('missing: "name"');
-				break;
-				case 'helper':
-				if(isset($_SERVER['argv'][2]))
-					new thanhtaivtt\Taiscript\Taiscript\Helper($_SERVER['argv'][2]);
-				else
-					exit('missing: "name"');
-				break;
-				case 'library':
-				if(isset($_SERVER['argv'][2]))
-					new thanhtaivtt\Taiscript\Taiscript\Library($_SERVER['argv'][2]);
-				else
-					exit('missing: "name"');
-				break;
-			}
-			break;
-		}
-	}
-	else{
-		echo "    
-		make:controller \t Create controller
-		make:model \t\t Create model
-		make:eloquent \t\t Create model extends eloquent
-		make:helper \t\t Create helper
-		make:library \t\t Create library
-
-	";
+require_once ('vendor/autoload.php');
+if (file_exists( 'vendor/thanhtaivtt/taiscript/src/taiscript/bootstrap.php' ) ) {
+	require_once ('vendor/thanhtaivtt/taiscript/src/taiscript/bootstrap.php');
+} else {
+	echo 'Missing vendor, you need run: conposer install';
 }
-}
+?>
