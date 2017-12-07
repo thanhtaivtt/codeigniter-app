@@ -106,7 +106,7 @@ $system_path = 'vendor/thanhtaivtt/ci-core/framework/system';
  *
  * NO TRAILING SLASH!
  */
-$application_folder = 'application';
+$application_folder = '../application';
 
 /*
  *---------------------------------------------------------------

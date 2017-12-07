@@ -3,7 +3,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
  * using eloquent of Laravel database
+ * 
  */
+
 use Illuminate\Database\Capsule\Manager as Elo;
 /*
 | -------------------------------------------------------------------
@@ -99,8 +101,10 @@ $db['default'] = array(
     'save_queries' => true,
 );
 
-// do not change
+
+
 $elo = new Elo();
+
 $elo->addConnection([
     'driver'    => 'mysql',
     'host'      => $db['default']['hostname'],
@@ -113,4 +117,5 @@ $elo->addConnection([
 ]);
 
 $elo->setAsGlobal();
+
 $elo->bootEloquent();

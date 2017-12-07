@@ -2,6 +2,7 @@
 	"description": "The CodeIgniter framework customs version",
 	"name": "thanhtaivtt/codeigniter-app",
 	"type": "project",
+	"version":"2.0.0",
 	"homepage": "https://toidicode.com",
 	"license": "MIT",
 	"support": {
@@ -13,8 +14,8 @@
 	},
 	"require": {
 		"php": ">=5.6.0",
-		"thanhtaivtt/ci-core": "1.0.0",
-		"thanhtaivtt/taiscript": "1.0.0",
+		"thanhtaivtt/ci-core": ">=1.0.0",
+		"thanhtaivtt/taiscript": ">=1.0.0",
 		"xiaoler/blade": "0.*",
 		"illuminate/database": "^5.3"
 	},
