@@ -1,9 +1,11 @@
 #!/usr/bin/php -q
-<?php 
-require_once ('vendor/autoload.php');
-if (file_exists( 'vendor/thanhtaivtt/taiscript/src/bootstrap.php' ) ) {
-	require_once ('vendor/thanhtaivtt/taiscript/src/bootstrap.php');
+<?php
+
+require_once 'vendor/autoload.php';
+
+if (file_exists('vendor/thanhtaivtt/taiscript/src/bootstrap.php')) {
+    require_once 'vendor/thanhtaivtt/taiscript/src/bootstrap.php';
 } else {
-	echo 'Missing vendor, you need run: conposer install';
+    echo 'Missing vendor, you need run: conposer install';
 }
-?>
+
