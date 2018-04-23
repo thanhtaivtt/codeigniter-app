@@ -2,7 +2,6 @@
     "description": "The CodeIgniter framework customs version",
     "name": "thanhtaivtt/codeigniter",
     "type": "project",
-    "version": "2.0.0",
     "homepage": "https://toidicode.com",
     "license": "MIT",
     "authors": [
@@ -22,8 +21,9 @@
     "require":
     {
         "php": ">=5.6.0",
-        "thanhtaivtt/ci-core": ">1.0.0",
-        "thanhtaivtt/taiscript": ">=1.0.0",
+        "thanhtaivtt/collection": "1.0.0",
+        "thanhtaivtt/ci-core": "3.0.3",
+        "thanhtaivtt/taiscript": "2.0.2",
         "xiaoler/blade": "0.*",
         "illuminate/database": "^5.3",
         "php-curl-class/php-curl-class": "5.1.*"
