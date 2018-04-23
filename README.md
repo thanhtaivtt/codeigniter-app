@@ -1,4 +1,5 @@
 # CodeIgniter Plus
+CodeIgniter Plus is a powerful version that combines Codeigniter, Taiscript, Laravel collection, Laravel Eloquent and Blade template. 
 
 ## Requires
 
@@ -6,7 +7,7 @@
 
 ## Instalation
 
-- Download source and run commandline:
+- Download this source and run the commandline:
 
 ```sh
 $ composer install
@@ -23,12 +24,24 @@ $ composer create-project thanhtaivtt/codeigniter-app projectName
 
 **Example:**
 
-```sh
+```bash
 // make controller
 $ php taiscript make:controller HomeController
 
-//make model 
+// make model 
 $ php taiscript make:model User
+
+// make helper
+$ php taiscript make:helper HelperName
+
+// make library
+$ php taiscript make:library LibraryName
+
+// make eloquent Model
+$ php taiscript make:Eloquent EloquentName
+
+// clear cache
+$ php taiscript clear:cache
 
 // Show list cmd
 $ php taiscript help
@@ -39,13 +52,15 @@ $ php taiscript help
 
 **Example:**
 
-- Model
+- Eloquent Model
 
 ```php
 <?php
+
 use \Illuminate\Database\Eloquent\Model as Eloquent;
 
-class User extends Eloquent{
+class User extends Eloquent
+{
     protected $table = 'users';
 
 }
@@ -54,9 +69,12 @@ class User extends Eloquent{
 - Controller
 
 ```php
+<?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class HomeController extends CI_Controller {
+class HomeController extends CI_Controller
+{
 
 	public function index()
 	{
@@ -67,6 +85,26 @@ class HomeController extends CI_Controller {
 	}
 }
 ```
+- Middleware:
+
+Create middleware in application/middleware folder. With file name equal function name inside middleware.
+
+Eg:
+
+```php
+<?php
+//application/middleware/Example.php
+
+function Example()
+{
+    //something
+}
+
+// call in controller
+// middleware('MiddelwareName')
+
+```
+
 ### Using The Blade Template
 
 **Example:**
@@ -91,10 +129,10 @@ class HomeController extends CI_Controller {
 ### Input
 - In Controller:
 ```php
-//get
+// get
 $this->get('name');
 
-//post
+// post
 $this->post('name')
 ```
 
